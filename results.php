@@ -13,24 +13,33 @@
 
 <?php
 
-
-
-class Apa {
+class SanctuaryThings {
+    protected $image = '';
+    
     public function draw() {
-        echo "<img src='./images/apa.jpg' height='250px;' onclick='alert(\"ap-ljud\")'; class='apa'/>";
+        echo "<img src='./images/$this->image' height='250px;' onclick='alert(\"ap-ljud\")'; class='apa'/>";
     }
+    
 }
 
-class Giraff {
-    public function draw() {
-        echo "<img src='./images/giraff.jpg' height='250px;' onclick='alert(\"giraff-ljud\")'; class='giraff'/>";
-    }
+
+
+class Apa extends SanctuaryThings {
+    
+    protected $image = 'apa.jpg';
+    
 }
 
-class Tiger {
-    public function draw() {
-        echo "<img src='./images/tiger.jpg' height='250px;' onclick='alert(\"tiger-ljud\")'; class='tiger'/>";
-    }
+class Giraff extends SanctuaryThings {
+    
+    protected $image = 'giraff.jpg';
+    
+}
+
+class Tiger extends SanctuaryThings {
+    
+    protected $image = 'tiger.jpg';
+
 }
 
 class Kokos {
